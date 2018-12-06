@@ -9,7 +9,3 @@ out
 ## GRADLE ##
 .gradle
 build
-
-.idea
-build
-out
