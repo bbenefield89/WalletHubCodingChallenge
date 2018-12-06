@@ -1,3 +1,15 @@
+## JAVA ##
+*.class
+*.jar
+
+## INTELLIJ ##
+.idea
+out
+
+## GRADLE ##
+.gradle
+build
+
 .idea
 build
 out
