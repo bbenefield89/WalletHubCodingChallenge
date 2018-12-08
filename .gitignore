@@ -14,7 +14,6 @@ out
 
 ## GRADLE ##
 .gradle
-build
 
 ## ENV VARIABLES ##
 .env
