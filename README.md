@@ -1,4 +1,12 @@
-﻿The goal is to write a parser in Java that parses web server access log file, loads the log to MySQL and checks if a given IP makes more than a certain number of requests for the given duration. 
+﻿# Instruction
+- Create Database an table: from root directory run `sudo mysql -u <<username>> -h <<host>> -p < wallethub_parser.sql`
+- Run `parser.jar` with: `java -cp "parser.jar" com.ef.Parser --accesslog=/path/to/file --startDate=2017-01-01.00:00:00 --duration=daily --threshold=500`
+  - This command will load the `access.log` file into the correct DB/table and print out all users over the threshold into the terminal
+- SQL Queries can also be tested using `sudo mysql -u <<username>> -h <<host>> -p < wallethub_parser.test.sql
+
+
+
+The goal is to write a parser in Java that parses web server access log file, loads the log to MySQL and checks if a given IP makes more than a certain number of requests for the given duration. 
 
 Java
 ----
