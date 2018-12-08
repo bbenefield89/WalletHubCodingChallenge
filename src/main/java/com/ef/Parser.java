@@ -53,13 +53,13 @@ public class Parser {
 
     public void setUsersOverAPILimitQuery() {
         this.usersOverAPILimitQuery = "" +
-            "select ip_address " +
-            "from log_activity " +
-            "where created_at " +
-            "  between ?" +
-            "  and date_add(?, interval 1 " + this.duration + ") " +
-            "group by ip_address " +
-            "having count(*) > ?;";
+            "SELECT ip_address " +
+            "FROM log_activity " +
+            "WHERE created_at " +
+            "  BETWEEN ?" +
+            "  AND DATE_ADD(?, interval 1 " + this.duration + ") " +
+            "GROUP BY ip_address " +
+            "HAVING COUNT(*) > ?;";
     }
 
     public void executeParserQuery() throws Exception {
@@ -87,11 +87,12 @@ public class Parser {
     
     private void setLoadAccessLogFileToDbQuery() {
         this.loadAccessLogFileToDbQuery = "" +
-            "load data local infile ? into table log_activity " +
-            "fields terminated by '|' " +
-            "lines terminated by '\\n' " +
+            "LOAD DATA LOCAL INFILE ? " +
+            "  INTO TABLE log_activity " +
+            "FIELDS TERMINATED BY '|' " +
+            "LINES TERMINATED BY '\\n' " +
             "(@c1, @c2, @c3, @c4, @c5) " +
-            "set " +
+            "SET " +
             "  created_at=@c1, " +
             "  ip_address=@c2, " +
             "  request_type=@c3, " +
