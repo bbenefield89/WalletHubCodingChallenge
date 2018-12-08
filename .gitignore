@@ -1,6 +1,5 @@
 ## JAVA ##
 *.class
-*.jar
 
 ## INTELLIJ ##
 .idea
