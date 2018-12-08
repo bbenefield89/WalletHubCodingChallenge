@@ -6,6 +6,15 @@
 .idea
 out
 
+## VSCODE ##
+.vscode
+.settings
+.classpath
+.project
+
 ## GRADLE ##
 .gradle
 build
+
+## ENV VARIABLES ##
+.env
