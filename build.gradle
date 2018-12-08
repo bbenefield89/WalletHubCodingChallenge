@@ -20,6 +20,8 @@ repositories {
 dependencies {
     // https://mvnrepository.com/artifact/mysql/mysql-connector-java
     compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.13'
+    // https://github.com/cdimascio/java-dotenv
+    compile 'io.github.cdimascio:java-dotenv:3.1.7'
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
 
